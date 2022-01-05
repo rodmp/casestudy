@@ -232,6 +232,11 @@ O desde Spring Tools Suite click derecho sobre el proyecto -> Run As -> Spring B
 
 El archivo testdb.mv contiene la base de datos.
 
+Para entrar a la consola de H2 es con la siguiente url: http://localhost:8080/h2-console
+
+user: sa
+password: pass
+
 #### Colección Postman
 
 La carpeta postman contiene una colección con los endpoints y poder probar las APIs.
