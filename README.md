@@ -24,21 +24,185 @@ Esta API contiene las siguientes funcionalidades:
     > /api/public/v1/parrot/case/study/products POST
     > /api/public/v1/parrot/case/study/orders POST
     > /api/public/v1/parrot/case/study/reports GET
+    
+### Url Swagger
+    
+    > http://localhost:8080/swagger-ui.html
 
 ## instrucciones de consumo
 URL :
 
-http://localhost:8080/swagger-ui.html#!/tripplan-resources-controller/getDifferencesResourcesUsingGET
+- getAllUsers
+http://localhost:8080/api/public/v1/parrot/case/study/users?page=0&size=2  GET
 
 ```
 
- - El servicio es invocable desde el paquete  **com.meep.tripplan.router.api** en el metodo:
-```java
-  public ResponseEntity<TripplanResourceDiffResponse> getDifferencesResources(){
-    
-  }
+ Se envian dos parametros, la pagina actual y los elementos por pagina
+ 
+ Ejemplo de respuesta:
+ 	
+ 	{
+	  "users": [
+	    {
+	      "id": 1,
+	      "email": "user1@parrot.com.mx",
+	      "name": "User ventas"
+	    },
+	    {
+	      "id": 2,
+	      "email": "user2@parrot.com.mx",
+	      "name": "User ventas2"
+	    }
+	  ],
+	  "totalPages": 1,
+	  "currentPage": 0,
+	  "totalItems": 2
+	}
 
 ```
+
+- createUser
+http://localhost:8080/api/public/v1/parrot/case/study/users   POST
+
+```
+ 
+ Ejemplo de solicitud:
+ 	
+ 	{
+    	"email" : "rodo3@gmail.com",
+    	"name" : "Herna3n"
+	}
+	
+ Ejemplo de respuesta:
+ 
+ 	201 Created
+
+```
+
+- getAllProducts
+http://localhost:8080/api/public/v1/parrot/case/study/products?page=2&size=2  GET
+
+```
+
+ Se envian dos parametros, la pagina actual y los elementos por pagina
+ 
+ Ejemplo de respuesta:
+ 	
+ 	{
+	    "products": [
+	        {
+	            "id": 5,
+	            "name": "sacapuntas",
+	            "price": 5.00,
+	            "stock": 245
+	        },
+	        {
+	            "id": 6,
+	            "name": "Pegamento",
+	            "price": 10.50,
+	            "stock": 50
+	        }
+	    ],
+	    "totalPages": 3,
+	    "currentPage": 2,
+	    "totalItems": 6
+	}
+
+```
+
+- createProduct
+http://localhost:8080/api/public/v1/parrot/case/study/products   POST
+
+```
+ 
+ Ejemplo de solicitud:
+ 	
+ 	{
+	    "name" : "Pegamento",
+	    "price" : "10.5",
+	    "stock" : "50"
+	}
+	
+ Ejemplo de respuesta:
+ 
+ 	201 Created
+
+```
+
+- createOrder
+http://localhost:8080/api/public/v1/parrot/case/study/orders   POST
+
+```
+ 
+ Ejemplo de solicitud:
+ 	
+ 	{
+	    "clientId" : 1,
+	    "total" : "135.90",
+	    "products": [
+	        {
+	            "id" : 1,
+	            "quantity" : 43
+	        },
+	        {
+	            "id" : 2,
+	            "quantity" : 3
+	        }
+	    ]
+	}
+	
+ Ejemplo de respuesta:
+ 
+ 	201 Created
+
+```
+
+- generateReport
+http://localhost:8080/api/public/v1/parrot/case/study/reports?size=5&page=0&startDate=2022-01-03&endDate=2022-01-04   get
+
+```
+ 
+ Se envian cuatro parametros, la pagina actual, los elementos por pagina, fecha de inicio y fin para consultar.
+ 
+ Ejemplo de respuesta:
+ 	
+ 	{
+	    "startDate": "2022-01-03",
+	    "endDate": "2022-01-04",
+	    "products": [
+	        {
+	            "name": "lapiz",
+	            "quantity": 10,
+	            "total": 60.00
+	        },
+	        {
+	            "name": "pluma",
+	            "quantity": 8,
+	            "total": 40.00
+	        },
+	        {
+	            "name": "sacapuntas",
+	            "quantity": 6,
+	            "total": 30.00
+	        },
+	        {
+	            "name": "regla",
+	            "quantity": 4,
+	            "total": 16.00
+	        },
+	        {
+	            "name": "goma",
+	            "quantity": 3,
+	            "total": 15.00
+	        }
+	    ],
+	    "totalPages": 1,
+	    "currentPage": 0,
+	    "totalItems": 5
+	}
+
+```
+
 ## Built With
 * Maven
 * Spring
@@ -64,29 +228,7 @@ O desde Spring Tools Suite click derecho sobre el proyecto -> Run As -> Spring B
  - Desde pring Tools Suite click derecho sobre el proyecto  > Run As >
    JUnit Test.  
 
-### Reporting
-Genera el reporte de check-style html y lo guarda en el site.
+#### Base de datos
 
-#### site
-Se divide en dos partes:
+El archivo testdb.mv contiene la base de datos.
 
-
- 1. Informacion del proyecto.
-
-	- Proporciona una descripción general de los diversos documentos y enlaces que forman parte de la información general de este proyecto.
-	
-2. Reportes de proyecto
-	
-	- Brindan un panoramageneral de varios reportes que son generados automaticamente por Maven.
-	
-EL site es generado  dentro de la ca: target > site > index.html
-	
-
-	$ mvn clean install site
-
-
-Sonar es una plataforma de código abierto utilizada por los equipos de desarrollo para gestionar la calidad del código fuente.
-
-mvn clean package site sonar:sonar -Pdevelopment_reporting
-
-En las últimas líneas de la salida de consola hay un enlace, cópielo y péguelo en cualquier navegador web para ver el informe.
