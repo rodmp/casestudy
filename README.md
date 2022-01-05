@@ -232,3 +232,8 @@ O desde Spring Tools Suite click derecho sobre el proyecto -> Run As -> Spring B
 
 El archivo testdb.mv contiene la base de datos.
 
+#### Colección Postman
+
+La carpeta postman contiene una colección con los endpoints y poder probar las APIs.
+
+
