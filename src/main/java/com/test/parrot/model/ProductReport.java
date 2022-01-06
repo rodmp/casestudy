@@ -8,6 +8,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
+ * Product report definition class.
  * 
  * @author parrot.
  *
@@ -20,18 +21,18 @@ import lombok.ToString;
 public class ProductReport {
 
   /**
-   * 
+   * Product name.
    */
   private String name;
-  
+
   /**
-   * 
+   * Product quantity order report.
    */
   private Integer quantity;
-  
+
   /**
-   * 
+   * Products total order request.
    */
   private BigDecimal total;
-  
+
 }

@@ -11,7 +11,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * Clase entidad de productos para la respuesta.
+ * Reponse Product definition class.
+ * 
  * @author parrot.
  *
  */
@@ -22,22 +23,22 @@ import lombok.Setter;
 public class ProductResponse {
 
   /**
-   * 
+   * List of product dto.
    */
   private List<ProductDto> products;
   
   /**
-   * 
+   * Total pagination pages.
    */
   private Integer totalPages;
   
   /**
-   * 
+   * Current page.
    */
   private Integer currentPage;
   
   /**
-   * 
+   * Total  items.
    */
   private Long totalItems;
 }

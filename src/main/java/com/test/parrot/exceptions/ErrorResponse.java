@@ -10,42 +10,42 @@ import com.test.parrot.constant.SpecialCharacterConstants;
 import lombok.Setter;
 
 /**
- * Clase error para respuesta del controlador.
+ * Error class for controller response.
  */
 @Setter
 public class ErrorResponse {
 
   /**
-   * Tipo de error.
+   * Error type.
    */
   private String type;
   /**
-   * Código del error.
+   * Error code.
    */
   private String code;
   /**
-   * Detalles del error.
+   * Error details.
    */
   private String details;
   /**
-   * Ubicación del error.
+   * Error location.
    */
   private String location;
   /**
-   * Información adicional del error.
+   * More info error.
    */
   private String moreInfo;
   /**
-   * UUID header de la petición.
+   * UUID header.
    */
   private String uuid;
   /**
-   * Fecha y hora cuando ocurre el error.
+   * Error time stamp.
    */
   private ZonedDateTime timestamp;
 
   /**
-   * Método para obtener el tipo de error.
+   * Get Error type Method.
    * 
    * @return type
    */
@@ -54,7 +54,7 @@ public class ErrorResponse {
   }
 
   /**
-   * Método para obtener el código de error.
+   * Get error code method.
    * 
    * @return code
    */
@@ -63,7 +63,7 @@ public class ErrorResponse {
   }
 
   /**
-   * Método para obtener el detalle del error.
+   * Get error details method.
    * 
    * @return details
    */
@@ -72,7 +72,7 @@ public class ErrorResponse {
   }
 
   /**
-   * Método para obtener la ubicación del error.
+   * Get error location method.
    * 
    * @return location
    */
@@ -81,7 +81,7 @@ public class ErrorResponse {
   }
 
   /**
-   * Método para obtener la información adicional del error.
+   * Get error more info method.
    * 
    * @return more info
    */
@@ -90,7 +90,7 @@ public class ErrorResponse {
   }
 
   /**
-   * Método para obtener el UUID.
+   * Get uuid method.
    * 
    * @return uuid
    */
@@ -99,7 +99,7 @@ public class ErrorResponse {
   }
 
   /**
-   * Método para obtener fecha y hora del error en formato yyyy-MM-dd'T'HH:mm:ssZ.
+   * Get error date in format yyyy-MM-dd'T'HH:mm:ssZ.
    * 
    * @return timestamp
    */

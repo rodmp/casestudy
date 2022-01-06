@@ -223,6 +223,9 @@ Se necesita tener instalado:
     mvn spring boot:run  en Local 
 O desde Spring Tools Suite click derecho sobre el proyecto -> Run As -> Spring Boot App
 
+El profile activo es dev y esta configurado dentro el archivo application.properties.
+
+Las configuraciones del sistema se encuentran dentro del archivo application-dev.properties en la carpeta config.
 
 ### Running JUnit tests
  - Desde pring Tools Suite click derecho sobre el proyecto  > Run As >

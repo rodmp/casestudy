@@ -4,6 +4,12 @@
 
 package com.test.parrot.service;
 
+/**
+ * Contract interface User service class.
+ * 
+ * @author parrot.
+ *
+ */
 import java.util.Optional;
 import com.test.parrot.model.UserRequest;
 import com.test.parrot.model.UserResponse;
@@ -11,16 +17,19 @@ import com.test.parrot.model.UserResponse;
 public interface UserService {
 
   /**
-   * Metood para buscar el total de elementos paginados.
-   * @param page Pagina actual.
-   * @param size Tamaño de la pagina.
-   * @return UserResponse con los elementos encontrados.
+   * Find all users method. Two parameters are received for pagination, one the page size and two
+   * the page number.
+   * 
+   * @param page Actual page requested.
+   * @param size Size of page..
+   * @return UserResponse Result of search.
    */
   public UserResponse findAllUsers(Optional<Integer> page, Optional<Integer> size);
-  
+
   /**
-   * Metodo que sirve para crear un nuevo usuario.
-   * @param userRequest Objeto de entrada.
+   * Create new user method. 
+   * 
+   * @param userRequest UserRequest object info requested.
    */
   public void createUser(UserRequest userRequest);
 }

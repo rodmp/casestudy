@@ -8,28 +8,28 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Clase que representa la excepcion para cuando la peticion tiene parametros o headers incorrectos
- * que no pueden ser procesados.
+ * Class that represents the exception for when the request has incorrect parameters or headers that
+ * cannot be processed. that cannot be processed.
  * 
  * @author .
  */
 public class BadRequestException extends RuntimeException {
 
   /**
-   * UID autogenerado para el versionado de la clase.
+   * Serializable version UID.
    */
   private static final long serialVersionUID = 8925303792177335247L;
 
   /**
-   * Lista de campos incorrectos en la peticion.
+   * List of incorrect fields in the request.
    */
   private final List<String> badFields;
 
   /**
-   * Constructor para inizializar la lista de campos incorrectos.
+   * Constructor to initialize the list of incorrect fields.
    * 
-   * @param message mensaje de excepción arrojada por bad request.
-   * @param badFields lista de campos que originaron la excepción.
+   * @param message exception message thrown by bad request.
+   * @param badFields list of fields that caused the exception.
    */
   public BadRequestException(String message, List<String> badFields) {
     super(message);
@@ -37,9 +37,9 @@ public class BadRequestException extends RuntimeException {
   }
 
   /**
-   * Método para obtener la lista de campos.
+   * Method to obtain the list of fields.
    * 
-   * @return List Lista de los campos.
+   * @return List List of fields.
    */
   public List<String> getBadFields() {
     return badFields;

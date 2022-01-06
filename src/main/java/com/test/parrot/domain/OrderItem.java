@@ -14,7 +14,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Client definition class.
+ * Order item definition class.
  * @author parrot.
  *
  */
@@ -25,22 +25,34 @@ import lombok.Setter;
 public class OrderItem implements Serializable {
   
   /**
-   * 
+   * Serializable version UID.
    */
   private static final long serialVersionUID = 1L;
 
+  /**
+   * Identifier table.
+   */
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  /**
+   * Product relation.
+   */
   @ManyToOne
   @JoinColumn(name = "product_id")
   private Product product;
 
+  /**
+   * Order relation.
+   */
   @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = false)
   @JoinColumn(name = "order_id")
   private Orders order;
-
+  
+  /**
+   * Quantity in order.
+   */
   private Integer quantity;
 
 }

@@ -5,29 +5,29 @@
 package com.test.parrot.exceptions.custom;
 
 /**
- * Clase que representa la excepcion para cuando el servicio corta la peticion debido a una espera
- * demasiado larga de alguna servicio externo invocado.
+ * Class that represents the exception for when the service cuts the request due to a too long wait
+ * for some invoked external service. too long for some invoked external service.
  * 
  * @author.
  */
 public class NotDataFoundException extends RuntimeException {
 
   /**
-   * UID autogenerado para el versionado de la clase.
+   * Serializable version UID.
    */
   private static final long serialVersionUID = 5141264074683480037L;
-  
+
   /**
-   * Constructor por defecto.
+   * Default constructor.
    */
   public NotDataFoundException() {
     super();
   }
-  
+
   /**
-   * Constructor que recibe el mensaje de error que debera mostrarse.
+   * Builder receiving an exception to be fired.
    * 
-   * @param message mensaje de la excepcion personalizado.
+   * @param message custom exception message.
    */
   public NotDataFoundException(String message) {
     super(message);

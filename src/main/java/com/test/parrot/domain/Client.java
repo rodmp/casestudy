@@ -31,12 +31,12 @@ import lombok.Setter;
 public class Client implements Serializable {
 
   /**
-   * 
+   * Serializable version UID.
    */
   private static final long serialVersionUID = 1L;
 
   /**
-   * 
+   * Client id value.
    */
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,12 +44,12 @@ public class Client implements Serializable {
   private Long id;
 
   /**
-   * 
+   * Name client.
    */
   private String name;
 
   /**
-   * 
+   * Order list.
    */
   @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   private List<Orders> order;

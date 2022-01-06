@@ -5,38 +5,38 @@
 package com.test.parrot.exceptions.custom;
 
 /**
- * Clase que representa la excepcion para cuando un cliente no tiene una sesion valida y no puede
- * realizar una operacion especifica.
+ * Class that represents the exception for when a client does not have a valid session and is unable
+ * to perform a specific operation.
  * 
  * @author.
  */
 public class ForbiddenException extends RuntimeException {
 
   /**
-   * UID autogenerado para el versionado de la clase.
+   * Serializable version UID.
    */
   private static final long serialVersionUID = -2353346493876392526L;
 
   /**
-   * Constructor por defecto.
+   * Default constructor.
    */
   public ForbiddenException() {
     super();
   }
 
   /**
-   * Constructor que recibe el mensaje de error que debera mostrarse.
+   * Constructor that receives the error message to be displayed.
    * 
-   * @param message mensaje de la excepcion personalizado.
+   * @param message custom exception message.
    */
   public ForbiddenException(String message) {
     super(message);
   }
 
   /**
-   * Constructor que recibe una excepcion a ser disparada.
+   * Builder receiving an exception to be fired.
    * 
-   * @param throwable de la excepción.
+   * @param throwable exception.
    */
   public ForbiddenException(Throwable throwable) {
     super(throwable);

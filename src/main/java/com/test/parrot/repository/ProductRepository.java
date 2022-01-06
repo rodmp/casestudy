@@ -13,6 +13,12 @@ import org.springframework.data.repository.query.Param;
 import com.test.parrot.constant.QueryConstant;
 import com.test.parrot.domain.Product;
 
+/**
+ * Interface product repository class.
+ * 
+ * @author parrot.
+ *
+ */
 public interface ProductRepository extends PagingAndSortingRepository<Product, Long> {
 
   /**

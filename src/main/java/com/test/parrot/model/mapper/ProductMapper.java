@@ -9,7 +9,7 @@ import com.test.parrot.domain.Product;
 import com.test.parrot.model.ProductDto;
 
 /**
- * 
+ * Product mapper class. Component helper to transform objects.
  * @author parrot.
  *
  */
@@ -17,9 +17,10 @@ import com.test.parrot.model.ProductDto;
 public class ProductMapper {
 
   /**
+   * Transform method, Product entity to ProductDto dto.
    * 
-   * @param product
-   * @return
+   * @param product Entity product.
+   * @return ProductDto object.
    */
   public ProductDto productToProductDto(Product product) {
     ProductDto productDto = new ProductDto();

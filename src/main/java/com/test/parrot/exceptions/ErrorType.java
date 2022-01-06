@@ -6,7 +6,7 @@ package com.test.parrot.exceptions;
 
 
 /**
- * Enum que define los tipos de error en la respuesta de la petición HTTP.
+ * Enum types error.
  * 
  * @author .
  */

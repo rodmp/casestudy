@@ -35,12 +35,12 @@ import lombok.Setter;
 public class Orders implements Serializable {
 
   /**
-   * 
+   * Serializable version UID.
    */
   private static final long serialVersionUID = 1L;
 
   /**
-   * 
+   * Order identifier table.
    */
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -48,21 +48,24 @@ public class Orders implements Serializable {
   private Long id;
 
   /**
-   * 
+   * Total order price.
    */
   private BigDecimal total;
 
   /**
-   * 
+   * Order transaction date.
    */
   @Column(name = "transaction_date")
   private LocalDate transactionDate;
 
+  /**
+   * Product relation.
+   */
   @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "product")
   private Set<OrderItem> products;
 
   /**
-   * 
+   * Client relation.
    */
   @OneToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "client_id")

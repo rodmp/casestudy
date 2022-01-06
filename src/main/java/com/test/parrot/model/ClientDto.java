@@ -11,6 +11,7 @@ import lombok.Setter;
 
 /**
  * Dto Client definition class.
+ * 
  * @author parrot.
  *
  */
@@ -20,10 +21,13 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ClientDto {
 
+  /**
+   * client Identifier.
+   */
   private Long id;
 
   /**
-   * 
+   * Client name.
    */
   private String name;
 }

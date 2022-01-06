@@ -12,6 +12,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * User response definition class.
+ * 
+ * @author parrot.
+ *
+ */
 @Setter
 @Getter
 @AllArgsConstructor
@@ -20,22 +26,22 @@ import lombok.ToString;
 public class UserResponse {
 
   /**
-   * 
+   * List users.
    */
   private List<User> users;
   
   /**
-   * 
+   * total pagination pages.
    */
   private Integer totalPages;
   
   /**
-   * 
+   * Current page.
    */
   private Integer currentPage;
   
   /**
-   * 
+   * total items.
    */
   private Long totalItems;
   

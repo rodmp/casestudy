@@ -5,8 +5,8 @@
 package com.test.parrot.exceptions.custom;
 
 /**
- * Clase que representa la excepcion para cuando un cliente no esta autorizado para realizar alguna
- * operacion especifica.
+ * Class that represents the exception for when a customer is not authorized to perform a specific
+ * transaction. specific operation.
  * 
  * @author .
  */
@@ -18,25 +18,25 @@ public class UnauthorizedException extends RuntimeException {
   private static final long serialVersionUID = -2122252302133789399L;
 
   /**
-   * Constructor por defecto.
+   * Serializable version UID.
    */
   public UnauthorizedException() {
     super();
   }
 
   /**
-   * Constructor que recibe el mensaje de error que debera mostrarse.
+   * Constructor that receives the error message to be displayed.
    * 
-   * @param message mensaje de la excepcion personalizado.
+   * @param message custom exception message.
    */
   public UnauthorizedException(String message) {
     super(message);
   }
 
   /**
-   * Constructor que recibe una excepcion a ser disparada.
+   * Builder receiving an exception to be fired.
    * 
-   * @param throwable de la excepción.
+   * @param throwable of exception.
    */
   public UnauthorizedException(Throwable throwable) {
     super(throwable);

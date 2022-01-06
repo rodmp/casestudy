@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import lombok.Getter;
 
 /**
- * Clase que contiene los valores externalizados del o las API's.
+ * Class containing the externalized values of the API(s).
  * 
  * @author .
  */
@@ -19,73 +19,73 @@ import lombok.Getter;
 public class ApiValues {
 
   /**
-   * Valor externalizado para indicar el paquete base del proyecto.
+   * Externalized value to indicate the base package of the project.
    */
   @Value("${constants.swagger.basePackage}")
   private String basePackage;
 
   /**
-   * Valor externalizado para indicar el titulo del API.
+   * Externalized value to indicate the API title.
    */
   @Value("${constants.swagger.title}")
   private String title;
 
   /**
-   * Valor externalizado para indicar la descripcion de la API.
+   * Externalized value to indicate the API description.
    */
   @Value("${constants.swagger.descriptionApi}")
   private String descriptionApi;
 
   /**
-   * Valor externalizado para indicar la version del swagger.
+   * Externalized value to indicate the swagger version.
    */
   @Value("${constants.swagger.version}")
   private String version;
 
   /**
-   * Valor externalizado para indicar el nombre del desarrollador.
+   * Externalized value to indicate the name of the developer.
    */
   @Value("${constants.swagger.nameDeveloper}")
   private String nameDeveloper;
 
   /**
-   * Valor externalizado para indicar la URL de la peticion.
+   * Externalized value to indicate the URL of the request.
    */
   @Value("${constants.swagger.contactUrl}")
   private String contactUrl;
 
   /**
-   * Valor externalizado para indicar el mail del desarrollador.
+   * Externalized value to indicate the developer's email.
    */
   @Value("${constants.swagger.emailDeveloper}")
   private String emailDeveloper;
 
   /**
-   * Valor externalizado para indicar las etiquetas del swagger.
+   * Externalized value to indicate the swagger tags.
    */
   @Value("${constants.swagger.label}")
   private String label;
 
   /**
-   * Valor externalizado para indicar el recurso a consumir.
+   * Externalized value to indicate the resource to be consumed.
    */
   @Value("${constants.swagger.resourceLocation}")
   private String resourceLocation;
 
   /**
-   * Valor externalizado para indicar donde se generan los artefactos de swagger.
+   * Externalized value to indicate where swagger artifacts are generated.
    */
   @Value("${constants.swagger.webjars}")
   private String webjars;
 
   /**
-   * Valor externalizado para indicar la ubicacion de los artefactos.
+   * Externalized value to indicate the location of the artifacts.
    */
   @Value("${constants.swagger.webjarsLocation}")
   private String webjarsLocation;
 
   /**
-   * Constructor privado para evitar la instancia de esta clase.
+   * Private constructor to avoid the instance of this class.
    */
   private ApiValues() {
 

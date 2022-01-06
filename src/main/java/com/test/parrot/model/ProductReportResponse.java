@@ -8,6 +8,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
+ * Product report response definition class.
  * 
  * @author parrot.
  *
@@ -20,32 +21,32 @@ import lombok.ToString;
 public class ProductReportResponse {
 
   /**
-   * 
+   * Start date filter.
    */
   private String startDate;
-  
+
   /**
-   * 
+   * End date filter
    */
   private String endDate;
-  
+
   /**
-   * 
+   * List of products report.
    */
   private List<ProductReport> products;
-  
+
   /**
-   * 
+   * Total pagination pages.
    */
   private Integer totalPages;
-  
+
   /**
-   * 
+   * Curren page.
    */
   private Integer currentPage;
-  
+
   /**
-   * 
+   * Total items.
    */
   private Long totalItems;
 }

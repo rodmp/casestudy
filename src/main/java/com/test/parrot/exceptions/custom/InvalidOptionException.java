@@ -5,36 +5,36 @@
 package com.test.parrot.exceptions.custom;
 
 /**
- * Clase que representa la excepcion para cuando el servicio recibe una opcion incorrecta dentro del
- * request esperado.
+ * Class that represents the exception for when the service receives an incorrect option within the
+ * expected request. expected request.
  * 
  * @author.
  */
 public class InvalidOptionException extends RuntimeException {
 
   /**
-   * UID autogenerado para el versionado de la clase.
+   * Serializable version UID.
    */
   private static final long serialVersionUID = 2920243542505819515L;
-  
+
   /**
-   * Constructor por defecto.
+   * Default constructor.
    */
   public InvalidOptionException() {
     super();
   }
 
   /**
-   * Constructor que recibe el mensaje de error que debera mostrarse.
+   * Constructor that receives the error message to be displayed.
    * 
-   * @param message mensaje de la excepcion personalizado.
+   * @param message custom exception message.
    */
   public InvalidOptionException(String message) {
     super(message);
   }
 
   /**
-   * Constructor que recibe una excepcion a ser disparada.
+   * Builder receiving an exception to be fired.
    * 
    * @param throwable de la excepción.
    */
